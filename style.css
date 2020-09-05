@@ -32,10 +32,10 @@ form input, form button {
 }
 
 form button {
-    color: #d88771;
+    color: #ff6f47;
     background-color: rgb(224, 206, 206);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; 
 }
 
 form button:hover {
@@ -68,6 +68,7 @@ form button:hover {
 .todo li{
     flex:1;
 }
+
 .trash-btn,
 .complete-btn {
     background: #ff6f47;
@@ -78,17 +79,21 @@ form button:hover {
     font-size: 1rem;
     transition: all 0.5s ease;
 }
+
 .complete-btn {
     background-color:  rgb(137, 240, 137);
 }
+
 .complete-btn:hover {
     background:  rgb(0, 148, 0);
     color:white;
 }
+
 .trash-btn:hover {
     background: #837d7c;
     color:white;
 }
+
 .todo-item {
     padding: 0rem 0.5rem;
 }
@@ -97,11 +102,50 @@ form button:hover {
 .fa-check {
     pointer-events: none;
 }
+
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
 }
+
 .fall{ 
     transform: translateY(8rem) rotateZ(20deg);
     opacity: 0; 
 } 
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background:#ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition:all 0.3s ease;
+}
+
+.select:hover::after{
+    background:#d88771;
+    color:white;
+}
